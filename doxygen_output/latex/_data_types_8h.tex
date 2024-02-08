@@ -1,0 +1,32 @@
+\doxysection{C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/\+Data\+Types.h File Reference}
+\hypertarget{_data_types_8h}{}\label{_data_types_8h}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/DataTypes.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/DataTypes.h}}
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$span$>$}\newline
+{\ttfamily \#include $<$Eigen/dense$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacedata}{data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacedata_a849f01e9cce82cf0ca23614ba136a322}\label{namespacedata_a849f01e9cce82cf0ca23614ba136a322} 
+typedef int {\bfseries data\+::index\+\_\+t}
+\item 
+\Hypertarget{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}\label{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e} 
+typedef Eigen\+::\+Vector\+Xd {\bfseries data\+::vector\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Element access type. \end{DoxyCompactList}\item 
+\Hypertarget{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}\label{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c} 
+typedef Eigen\+::\+Matrix\+Xd {\bfseries data\+::matrix\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Column vector of real numbers. \end{DoxyCompactList}\item 
+\Hypertarget{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}\label{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b} 
+typedef std\+::map$<$ int, \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\+\_\+t}} $>$ {\bfseries data\+::panel\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Matrix type for data storage of oservational data. \end{DoxyCompactList}\item 
+\Hypertarget{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}\label{namespacedata_ad30bd2f797103f429a683f5d54a39f5a} 
+typedef std\+::vector$<$ int $>$ {\bfseries data\+::range\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Conatiner storing panel data as sequence of matricies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains base definitions of custom data types used to manipulate obervational data. 

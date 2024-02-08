@@ -1,0 +1,32 @@
+\doxysection{Elastic\+Net\+GMM.\+h}
+\hypertarget{_elastic_net_g_m_m_8h_source}{}\label{_elastic_net_g_m_m_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ElasticNetGMM.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ElasticNetGMM.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}ObjectiveFunctionInterface.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}PanelDataInterface.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_elasti_net_g_m_m}{ElastiNetGMM}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_objective_function_interface}{ObjectiveFunctionInterface}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \mbox{\hyperlink{class_elasti_net_g_m_m}{ElastiNetGMM}}\ (\mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}*\ panelData);}
+\DoxyCodeLine{00009\ \ \ \ \ \string~\ ElastiNetGMM\ ();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{class_elasti_net_g_m_m_a9ce3d542671b3495077fc7daf7ac1543}{evaluate}}\ \ (\mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ x0)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \ \ \mbox{\hyperlink{class_elasti_net_g_m_m_a22a2866a70a632dbffc35a59315f9ca8}{getValue}}\ \ ()\ \ \ \ \ \ \ \ \ \ \ \ const\ override\ final;}
+\DoxyCodeLine{00013\ \ \ \ \ virtual\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ getGadient()\ \ \ \ \ \ \ \ \ \ \ \ const\ override\ final;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ private:}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ vectoriseParams\ (\mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\_t}}\&\ adjacencyMat,\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\&\ scalarParams);}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ private:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_ajacencyMatrix\ \ \ \{matrix\_t::Random(3,3)\};}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_scalarParams\ \ \ \ \ \{vector\_t::Zero(3)\};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_unitCount;}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_periodCount;}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_varCount;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \};}
+
+\end{DoxyCode}

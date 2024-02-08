@@ -1,0 +1,47 @@
+\doxysection{Panel\+Data.\+h}
+\hypertarget{_panel_data_8h_source}{}\label{_panel_data_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/PanelData.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/PanelData.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}PanelDataInterface.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedata}{data}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdata_1_1_panel_data}{PanelData}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdata_1_1_panel_data}{PanelData}}(\mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\_t}}\&\ observedData);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdata_1_1_panel_data}{\string~PanelData}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\_t}}\&\ \mbox{\hyperlink{classdata_1_1_panel_data_a0d3c1d3ab7618e8e71a6130cd743378d}{getPanel}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\_t}}\ \ \mbox{\hyperlink{classdata_1_1_panel_data_a363ecc5a2b180cbbdd845d5fc54f85e6}{getXt}}(index\_t\&\ t)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};\ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ \ \mbox{\hyperlink{classdata_1_1_panel_data_ac50304fcc38e177691e2b5dd5336862f}{getYt}}(index\_t\&\ t)\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};\ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ index\_t\ \ \ \mbox{\hyperlink{classdata_1_1_panel_data_a5fe1488bca7efec088d835fe98d8ba94}{timeDim}}()\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ index\_t\ \ \ varsDim()\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ index\_t\ \ \ unitCount()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ \mbox{\hyperlink{classdata_1_1_panel_data_a4e1ccdb88d2913a87ee4cf8af75bb0ed}{timeRange}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ varsRange()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ unitRange()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ getSequence\ (\textcolor{keyword}{auto}\&\ end);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ getSequence\ (\textcolor{keyword}{auto}\&\ start,\ \textcolor{keyword}{auto}\&\ end);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\_t}}\&\ m\_data;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ index\_t\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ m\_T;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ index\_t\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ m\_n;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ index\_t\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ m\_k;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ m\_timeRange;\ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ m\_varsRange;\ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ m\_unitRange;\ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}

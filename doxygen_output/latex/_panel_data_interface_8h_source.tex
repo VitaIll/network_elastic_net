@@ -1,0 +1,29 @@
+\doxysection{Panel\+Data\+Interface.\+h}
+\hypertarget{_panel_data_interface_8h_source}{}\label{_panel_data_interface_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/PanelDataInterface.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/PanelDataInterface.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedata}{data}}\ }
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\_t}}\&\ \mbox{\hyperlink{classdata_1_1_panel_data_interface_a928402deb74ca4c5560c87721c8e49eb}{getPanel}}\ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\_t}}\ \mbox{\hyperlink{classdata_1_1_panel_data_interface_a9065913d03d7431ba21fb1f5e9a7c75b}{getXt}}\ (index\_t\&\ t)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ getYt\ (index\_t\&\ t)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ index\_t\ \ \mbox{\hyperlink{classdata_1_1_panel_data_interface_a3c8ac3c9625d979d415a22e84cc9a981}{timeDim}}\ \ \ \ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ index\_t\ \ varsDim\ \ \ \ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ index\_t\ \ unitCount\ \ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ \mbox{\hyperlink{classdata_1_1_panel_data_interface_a02a86a12aeba0aa06f0cd9fb336b1326}{timeRange}}\ ()\ \textcolor{keyword}{const}\ \ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ varsRange\ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\_t}}\ \ unitRange\ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}

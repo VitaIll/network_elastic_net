@@ -1,0 +1,151 @@
+\doxysection{data\+::Panel\+Data Class Reference}
+\hypertarget{classdata_1_1_panel_data}{}\label{classdata_1_1_panel_data}\index{data::PanelData@{data::PanelData}}
+Inheritance diagram for data\+::Panel\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdata_1_1_panel_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdata_1_1_panel_data_a656cf76006b1cc8ed84f0eaf1e02687c}\label{classdata_1_1_panel_data_a656cf76006b1cc8ed84f0eaf1e02687c} 
+{\bfseries Panel\+Data} (\mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\+\_\+t}} \&observed\+Data)
+\item 
+virtual \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\+\_\+t}} \& \mbox{\hyperlink{classdata_1_1_panel_data_a0d3c1d3ab7618e8e71a6130cd743378d}{get\+Panel}} () const override final
+\begin{DoxyCompactList}\small\item\em return panel \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_a363ecc5a2b180cbbdd845d5fc54f85e6}{get\+Xt}} (index\+\_\+t \&t) const override final
+\begin{DoxyCompactList}\small\item\em return data in given period \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_ac50304fcc38e177691e2b5dd5336862f}{get\+Yt}} (index\+\_\+t \&t) const override final
+\begin{DoxyCompactList}\small\item\em get matrix of exogenous variables at time t \end{DoxyCompactList}\item 
+virtual index\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_a5fe1488bca7efec088d835fe98d8ba94}{time\+Dim}} () const override final
+\begin{DoxyCompactList}\small\item\em get the response vector at time t \end{DoxyCompactList}\item 
+virtual index\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_aa7348cea2f533f28235083a320db154a}{vars\+Dim}} () const override final
+\item 
+virtual index\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_a0f96e441ac4623ec1ac936285bcac077}{unit\+Count}} () const override final
+\item 
+virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_a4e1ccdb88d2913a87ee4cf8af75bb0ed}{time\+Range}} () const override final
+\begin{DoxyCompactList}\small\item\em return iterables \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_aaa20c59f4b64eea36ecf04921acf75af}{vars\+Range}} () const override final
+\item 
+virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_a28a681fd8101d6a01aee286b4fa91a01}{unit\+Range}} () const override final
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdata_1_1_panel_data_a0d3c1d3ab7618e8e71a6130cd743378d}\label{classdata_1_1_panel_data_a0d3c1d3ab7618e8e71a6130cd743378d} 
+\index{data::PanelData@{data::PanelData}!getPanel@{getPanel}}
+\index{getPanel@{getPanel}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{getPanel()}{getPanel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\+\_\+t}} \& data\+::\+Panel\+Data\+::get\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return panel 
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface_a928402deb74ca4c5560c87721c8e49eb}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_a363ecc5a2b180cbbdd845d5fc54f85e6}\label{classdata_1_1_panel_data_a363ecc5a2b180cbbdd845d5fc54f85e6} 
+\index{data::PanelData@{data::PanelData}!getXt@{getXt}}
+\index{getXt@{getXt}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{getXt()}{getXt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\+\_\+t}} data\+::\+Panel\+Data\+::get\+Xt (\begin{DoxyParamCaption}\item[{index\+\_\+t \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return data in given period 
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface_a9065913d03d7431ba21fb1f5e9a7c75b}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_ac50304fcc38e177691e2b5dd5336862f}\label{classdata_1_1_panel_data_ac50304fcc38e177691e2b5dd5336862f} 
+\index{data::PanelData@{data::PanelData}!getYt@{getYt}}
+\index{getYt@{getYt}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{getYt()}{getYt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\+\_\+t}} data\+::\+Panel\+Data\+::get\+Yt (\begin{DoxyParamCaption}\item[{index\+\_\+t \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get matrix of exogenous variables at time t 
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_a5fe1488bca7efec088d835fe98d8ba94}\label{classdata_1_1_panel_data_a5fe1488bca7efec088d835fe98d8ba94} 
+\index{data::PanelData@{data::PanelData}!timeDim@{timeDim}}
+\index{timeDim@{timeDim}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{timeDim()}{timeDim()}}
+{\footnotesize\ttfamily index\+\_\+t data\+::\+Panel\+Data\+::time\+Dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the response vector at time t 
+
+return dimensions 
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface_a3c8ac3c9625d979d415a22e84cc9a981}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_a4e1ccdb88d2913a87ee4cf8af75bb0ed}\label{classdata_1_1_panel_data_a4e1ccdb88d2913a87ee4cf8af75bb0ed} 
+\index{data::PanelData@{data::PanelData}!timeRange@{timeRange}}
+\index{timeRange@{timeRange}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{timeRange()}{timeRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} data\+::\+Panel\+Data\+::time\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return iterables 
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface_a02a86a12aeba0aa06f0cd9fb336b1326}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_a0f96e441ac4623ec1ac936285bcac077}\label{classdata_1_1_panel_data_a0f96e441ac4623ec1ac936285bcac077} 
+\index{data::PanelData@{data::PanelData}!unitCount@{unitCount}}
+\index{unitCount@{unitCount}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{unitCount()}{unitCount()}}
+{\footnotesize\ttfamily index\+\_\+t data\+::\+Panel\+Data\+::unit\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_a28a681fd8101d6a01aee286b4fa91a01}\label{classdata_1_1_panel_data_a28a681fd8101d6a01aee286b4fa91a01} 
+\index{data::PanelData@{data::PanelData}!unitRange@{unitRange}}
+\index{unitRange@{unitRange}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{unitRange()}{unitRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} data\+::\+Panel\+Data\+::unit\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_aa7348cea2f533f28235083a320db154a}\label{classdata_1_1_panel_data_aa7348cea2f533f28235083a320db154a} 
+\index{data::PanelData@{data::PanelData}!varsDim@{varsDim}}
+\index{varsDim@{varsDim}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{varsDim()}{varsDim()}}
+{\footnotesize\ttfamily index\+\_\+t data\+::\+Panel\+Data\+::vars\+Dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface}{data\+::\+Panel\+Data\+Interface}}.
+
+\Hypertarget{classdata_1_1_panel_data_aaa20c59f4b64eea36ecf04921acf75af}\label{classdata_1_1_panel_data_aaa20c59f4b64eea36ecf04921acf75af} 
+\index{data::PanelData@{data::PanelData}!varsRange@{varsRange}}
+\index{varsRange@{varsRange}!data::PanelData@{data::PanelData}}
+\doxysubsubsection{\texorpdfstring{varsRange()}{varsRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} data\+::\+Panel\+Data\+::vars\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdata_1_1_panel_data_interface}{data\+::\+Panel\+Data\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/Panel\+Data.\+h\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/Panel\+Data.\+cpp\end{DoxyCompactItemize}
