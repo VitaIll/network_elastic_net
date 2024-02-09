@@ -6,7 +6,7 @@ namespace objective_function
 		:
 		m_unitCount(unitCount)
 	{
-		;
+		m_theseParams = std::make_shared<EstimatedParams>(*this);
 	}
 
 	EstimatedParams:: ~EstimatedParams()
@@ -20,7 +20,7 @@ namespace objective_function
 	}
 
 	void EstimatedParams::unpackVector(vector_t const& paramVector)
-	{
+	{	
 		m_scalarParams = paramVector.tail(3);
 
 		m_rho    = m_scalarParams(0);
@@ -30,12 +30,13 @@ namespace objective_function
 	for (int i = 0; i < m_unitCount; i++)
 	{
 		vector_t row    = vector_t::Zero(m_unitCount);
-		vector_t params = paramVector.segment(i * (m_unitCount - 1), m_unitCount - 1);
+		vector_t params = paramVector.segment(i * (m_unitCount - 1), m_unitCount -1);
 
 		row.head(i)                   = params.head(i);
 		row.tail(m_unitCount - i - 1) = params.tail(m_unitCount - i - 1);
 		m_adjacencyMatrix.row(i)      = row;
 	}
+	  m_theseParams = std::make_shared<EstimatedParams>(*this);
     }
 		
 }

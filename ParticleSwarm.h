@@ -32,7 +32,7 @@ namespace optimization_algorithms::swarm_algorithms
 	  private:
 		  int    const                                  m_populationSize   {  100   };
 		  int    const                                  m_maxIter          {  100   };
-		  double const                                  m_bound            {  0.01  };
+		  double const                                  m_bound            {  2.0   };
 
 		  pointer_t                                     m_thisSwarm        { nullptr };
 		  ObjectiveFunctionInterface*                   m_objective;

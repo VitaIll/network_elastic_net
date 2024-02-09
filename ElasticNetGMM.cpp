@@ -9,7 +9,11 @@ namespace objective_function
         m_periodCount(panelData -> timeDim()),
         m_varCount(panelData -> varsDim())
     {
-        ;
+        EstimatedParams params = EstimatedParams(m_unitCount);
+        m_params = std::make_shared<EstimatedParams>(params);
+       
+        Errors          errors = Errors(m_params);
+        m_errors = std::make_shared<Errors>(errors);
     }
 
     ElastiNetGMM:: ~ ElastiNetGMM ()
@@ -39,7 +43,9 @@ namespace objective_function
         return  m_unitCount * (m_unitCount - 1) + 3;
     }
     double ElastiNetGMM::evalGMM(const vector_t& x_0) const
-    {  
+    {
+       // m_params ->operator()(x_0);
+
         int  unitCount    = m_dataIface -> unitCount();
         panel_t panel     = m_dataIface -> getPanel ();
         range_t timeRange = m_dataIface -> timeRange();
@@ -53,7 +59,7 @@ namespace objective_function
         {
             matrix_t m_t = panel[t];
             vector_t x_t = m_dataIface -> getXt(t);
-            vector_t e_t = m_errors(x_0, m_t);
+            vector_t e_t = m_errors->operator()(x_0, m_t);
            
             matrix_t g   = matrix_t::Zero(unitCount, unitCount);
 
@@ -63,11 +69,11 @@ namespace objective_function
             }
             gNT += g.reshaped(q, 1);
         }
-        matrix_t W = m_params.adjacencyMatrix();
+        matrix_t W = m_params -> adjacencyMatrix();
        
-        double GMM = (gNT.transpose() * Iqq) * gNT 
-                       + m_l1param * W.lpNorm<1>() 
-                       + m_l2param * W.lpNorm<2>();
+        double GMM = (gNT.transpose() * Iqq) * gNT;
+                        + m_l1param * W.lpNorm<1>() 
+                        + m_l2param * W.lpNorm<2>();
         return GMM;
     }
 }

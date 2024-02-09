@@ -9,7 +9,7 @@ namespace optimization_algorithms::swarm_algorithms
 	{
 		int dim    = m_position.size();
 		m_velocity = vector_t::Zero(dim);
-
+		this       -> update(m_position);
 		m_thisParticle = std::make_shared<Particle>(*this);
 
 	}
