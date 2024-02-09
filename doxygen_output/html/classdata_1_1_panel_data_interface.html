@@ -23,8 +23,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elastic net GMM
+   <div id="projectname">Elastic net GMM<span id="projectnumber">&#160;1.1</span>
    </div>
+   <div id="projectbrief">Elastic net GMM estimation of network systems.</div>
   </td>
  </tr>
  </tbody>
@@ -71,7 +72,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacedata.html">data</a></li><li class="navelem"><a class="el" href="classdata_1_1_panel_data_interface.html">PanelDataInterface</a></li>  </ul>
+<li class="navelem"><b>data</b></li><li class="navelem"><a class="el" href="classdata_1_1_panel_data_interface.html">PanelDataInterface</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,16 +94,13 @@ Inheritance diagram for data::PanelDataInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a928402deb74ca4c5560c87721c8e49eb" id="r_a928402deb74ca4c5560c87721c8e49eb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedata.html#a53c1ffbaa94b2a14df5bc4326937480b">panel_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928402deb74ca4c5560c87721c8e49eb">getPanel</a> () const =0</td></tr>
-<tr class="memdesc:a928402deb74ca4c5560c87721c8e49eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns observational panel data.  <br /></td></tr>
+<tr class="memitem:a928402deb74ca4c5560c87721c8e49eb" id="r_a928402deb74ca4c5560c87721c8e49eb"><td class="memItemLeft" align="right" valign="top">virtual panel_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928402deb74ca4c5560c87721c8e49eb">getPanel</a> () const =0</td></tr>
 <tr class="separator:a928402deb74ca4c5560c87721c8e49eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9065913d03d7431ba21fb1f5e9a7c75b" id="r_a9065913d03d7431ba21fb1f5e9a7c75b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedata.html#a2de251cb314c9459ede3ac5ccdf1c23c">matrix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9065913d03d7431ba21fb1f5e9a7c75b">getXt</a> (index_t &amp;t) const =0</td></tr>
-<tr class="memdesc:a9065913d03d7431ba21fb1f5e9a7c75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data getter: return data from the specified time period.  <br /></td></tr>
+<tr class="memitem:a9065913d03d7431ba21fb1f5e9a7c75b" id="r_a9065913d03d7431ba21fb1f5e9a7c75b"><td class="memItemLeft" align="right" valign="top">virtual matrix_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9065913d03d7431ba21fb1f5e9a7c75b">getXt</a> (index_t &amp;t) const =0</td></tr>
 <tr class="separator:a9065913d03d7431ba21fb1f5e9a7c75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d74b3e8d40be7b4986eb6370d64933b" id="r_a8d74b3e8d40be7b4986eb6370d64933b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedata.html#a0ba61e7e389a1df117dc236b17b0c38e">vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d74b3e8d40be7b4986eb6370d64933b">getYt</a> (index_t &amp;t) const =0</td></tr>
+<tr class="memitem:a8d74b3e8d40be7b4986eb6370d64933b" id="r_a8d74b3e8d40be7b4986eb6370d64933b"><td class="memItemLeft" align="right" valign="top">virtual vector_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d74b3e8d40be7b4986eb6370d64933b">getYt</a> (index_t &amp;t) const =0</td></tr>
 <tr class="separator:a8d74b3e8d40be7b4986eb6370d64933b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c8ac3c9625d979d415a22e84cc9a981" id="r_a3c8ac3c9625d979d415a22e84cc9a981"><td class="memItemLeft" align="right" valign="top">virtual index_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c8ac3c9625d979d415a22e84cc9a981">timeDim</a> () const =0</td></tr>
-<tr class="memdesc:a3c8ac3c9625d979d415a22e84cc9a981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return data dimensions.  <br /></td></tr>
 <tr class="separator:a3c8ac3c9625d979d415a22e84cc9a981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada098834b1132e1b2b734fcaf4a21686" id="r_ada098834b1132e1b2b734fcaf4a21686"><td class="memItemLeft" align="right" valign="top"><a id="ada098834b1132e1b2b734fcaf4a21686" name="ada098834b1132e1b2b734fcaf4a21686"></a>
 virtual index_t&#160;</td><td class="memItemRight" valign="bottom"><b>varsDim</b> () const =0</td></tr>
@@ -110,14 +108,13 @@ virtual index_t&#160;</td><td class="memItemRight" valign="bottom"><b>varsDim</b
 <tr class="memitem:a5d5f8477cd23b963461a17921b8ef8ad" id="r_a5d5f8477cd23b963461a17921b8ef8ad"><td class="memItemLeft" align="right" valign="top"><a id="a5d5f8477cd23b963461a17921b8ef8ad" name="a5d5f8477cd23b963461a17921b8ef8ad"></a>
 virtual index_t&#160;</td><td class="memItemRight" valign="bottom"><b>unitCount</b> () const =0</td></tr>
 <tr class="separator:a5d5f8477cd23b963461a17921b8ef8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02a86a12aeba0aa06f0cd9fb336b1326" id="r_a02a86a12aeba0aa06f0cd9fb336b1326"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">range_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a86a12aeba0aa06f0cd9fb336b1326">timeRange</a> () const =0</td></tr>
-<tr class="memdesc:a02a86a12aeba0aa06f0cd9fb336b1326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return iterables for comfortable data parsing.  <br /></td></tr>
+<tr class="memitem:a02a86a12aeba0aa06f0cd9fb336b1326" id="r_a02a86a12aeba0aa06f0cd9fb336b1326"><td class="memItemLeft" align="right" valign="top">virtual range_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a86a12aeba0aa06f0cd9fb336b1326">timeRange</a> () const =0</td></tr>
 <tr class="separator:a02a86a12aeba0aa06f0cd9fb336b1326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2312a1e9081872d3cdfe6765cba0a22" id="r_aa2312a1e9081872d3cdfe6765cba0a22"><td class="memItemLeft" align="right" valign="top"><a id="aa2312a1e9081872d3cdfe6765cba0a22" name="aa2312a1e9081872d3cdfe6765cba0a22"></a>
-virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">range_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>varsRange</b> () const =0</td></tr>
+virtual range_t&#160;</td><td class="memItemRight" valign="bottom"><b>varsRange</b> () const =0</td></tr>
 <tr class="separator:aa2312a1e9081872d3cdfe6765cba0a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2653ec8daa767e12fac3b60df00f906a" id="r_a2653ec8daa767e12fac3b60df00f906a"><td class="memItemLeft" align="right" valign="top"><a id="a2653ec8daa767e12fac3b60df00f906a" name="a2653ec8daa767e12fac3b60df00f906a"></a>
-virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">range_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>unitRange</b> () const =0</td></tr>
+virtual range_t&#160;</td><td class="memItemRight" valign="bottom"><b>unitRange</b> () const =0</td></tr>
 <tr class="separator:a2653ec8daa767e12fac3b60df00f906a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -131,7 +128,7 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespacedata.html#a53c1ffbaa94b2a14df5bc4326937480b">panel_t</a> &amp; data::PanelDataInterface::getPanel </td>
+          <td class="memname">virtual panel_t &amp; data::PanelDataInterface::getPanel </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -143,15 +140,6 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Returns observational panel data. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">t</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="classdata_1_1_panel_data.html#a0d3c1d3ab7618e8e71a6130cd743378d">data::PanelData</a>.</p>
 
@@ -167,7 +155,7 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespacedata.html#a2de251cb314c9459ede3ac5ccdf1c23c">matrix_t</a> data::PanelDataInterface::getXt </td>
+          <td class="memname">virtual matrix_t data::PanelDataInterface::getXt </td>
           <td>(</td>
           <td class="paramtype">index_t &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
           <td> const</td>
@@ -179,15 +167,6 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Data getter: return data from the specified time period. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">t</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="classdata_1_1_panel_data.html#a363ecc5a2b180cbbdd845d5fc54f85e6">data::PanelData</a>.</p>
 
@@ -203,7 +182,7 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespacedata.html#a0ba61e7e389a1df117dc236b17b0c38e">vector_t</a> data::PanelDataInterface::getYt </td>
+          <td class="memname">virtual vector_t data::PanelDataInterface::getYt </td>
           <td>(</td>
           <td class="paramtype">index_t &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
           <td> const</td>
@@ -243,9 +222,6 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
 </table>
 </div><div class="memdoc">
 
-<p>Return data dimensions. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
 <p>Implemented in <a class="el" href="classdata_1_1_panel_data.html#a5fe1488bca7efec088d835fe98d8ba94">data::PanelData</a>.</p>
 
 </div>
@@ -260,7 +236,7 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">range_t</a> data::PanelDataInterface::timeRange </td>
+          <td class="memname">virtual range_t data::PanelDataInterface::timeRange </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -272,9 +248,6 @@ virtual <a class="el" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Return iterables for comfortable data parsing. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="classdata_1_1_panel_data.html#a4e1ccdb88d2913a87ee4cf8af75bb0ed">data::PanelData</a>.</p>
 

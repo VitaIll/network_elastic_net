@@ -1,19 +1,28 @@
 \doxysection{Objective\+Function\+Interface.\+h}
 \hypertarget{_objective_function_interface_8h_source}{}\label{_objective_function_interface_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ObjectiveFunctionInterface.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ObjectiveFunctionInterface.h}}
-
+\mbox{\hyperlink{_objective_function_interface_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacedata}{data}};}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_objective_function_interface}{ObjectiveFunctionInterface}}}
-\DoxyCodeLine{00007\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{class_objective_function_interface_a6a4f1383625f7ddc5e5374d11885deb1}{evaluate}}\ \ \ \ \ (\mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ x0)\ =\ 0;}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}EstimatedParams.h"{}}}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \ \ \mbox{\hyperlink{class_objective_function_interface_a97e7159494bf71d7709d3c818dcf238c}{getValue}}\ \ \ \ \ ()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ getGadient\ \ \ ()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }objective\_function}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ operator\ ()\ (\textcolor{keyword}{const}\ vector\_t\&\ x\_0)\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ vector\_t\ \ \ \ \ \ \ diff\ (\textcolor{keyword}{const}\ vector\_t\&\ x\_0)\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ dimensions()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ EstimatedParams::pointer\_t\ getParams\ ()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00048\ }
 
 \end{DoxyCode}

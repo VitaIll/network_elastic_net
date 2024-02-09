@@ -1,32 +1,51 @@
 \doxysection{Elastic\+Net\+GMM.\+h}
 \hypertarget{_elastic_net_g_m_m_8h_source}{}\label{_elastic_net_g_m_m_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ElasticNetGMM.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ElasticNetGMM.h}}
-
+\mbox{\hyperlink{_elastic_net_g_m_m_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}ObjectiveFunctionInterface.h"{}}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}PanelDataInterface.h"{}}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_elasti_net_g_m_m}{ElastiNetGMM}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_objective_function_interface}{ObjectiveFunctionInterface}}}
-\DoxyCodeLine{00006\ \{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00008\ \ \ \ \ \ \ \mbox{\hyperlink{class_elasti_net_g_m_m}{ElastiNetGMM}}\ (\mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}*\ panelData);}
-\DoxyCodeLine{00009\ \ \ \ \ \string~\ ElastiNetGMM\ ();}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{class_elasti_net_g_m_m_a9ce3d542671b3495077fc7daf7ac1543}{evaluate}}\ \ (\mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ x0)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \ \ \mbox{\hyperlink{class_elasti_net_g_m_m_a22a2866a70a632dbffc35a59315f9ca8}{getValue}}\ \ ()\ \ \ \ \ \ \ \ \ \ \ \ const\ override\ final;}
-\DoxyCodeLine{00013\ \ \ \ \ virtual\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ getGadient()\ \ \ \ \ \ \ \ \ \ \ \ const\ override\ final;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ private:}
-\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ vectoriseParams\ (\mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\_t}}\&\ adjacencyMat,\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\&\ scalarParams);}
-\DoxyCodeLine{00020\ \ \ \ \ }
-\DoxyCodeLine{00021\ private:}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_ajacencyMatrix\ \ \ \{matrix\_t::Random(3,3)\};}
-\DoxyCodeLine{00026\ \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_scalarParams\ \ \ \ \ \{vector\_t::Zero(3)\};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_unitCount;}
-\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_periodCount;}
-\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_varCount;}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_objective_function_interface_8h}{ObjectiveFunctionInterface.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}PanelDataInterface.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}EstimatedParams.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Errors.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <Eigen/dense>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }objective\_function}
+\DoxyCodeLine{00017\ \{\ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m}{ElastiNetGMM}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a998cb1d2dc088d9511c29882d1e2fb97}{ElastiNetGMM}}\ (\mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}*\ panelData);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \string~\ ElastiNetGMM\ ();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a0a9f80497a8de6e358802ab167e64cb7}{operator\ ()\ \ }}(\textcolor{keyword}{const}\ vector\_t\&\ x\_0)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ vector\_t\ \ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_af284a03b96c24a5f0f4111f9b6c33bee}{diff}}(\textcolor{keyword}{const}\ vector\_t\&\ x\_0)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a124a23176f28b04f70bb0c03735f6bf8}{dimensions}}()\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ EstimatedParams::pointer\_t\ \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_aebad1339a616ecc2eb1acfd8dd181583}{getParams}}()\ const\ override\ final\ \{\ \textcolor{keywordflow}{return}\ m\_params;\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ evalGMM(\textcolor{keyword}{const}\ vector\_t\&\ x\_0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_dataIface;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ EstimatedParams::pointer\_t\ \ \ \ \ \ \ \ \ \ \ \ m\_params\ \ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ Errors::pointer\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_errors\ \ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_unitCount;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_periodCount;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_varCount;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_perturbParam\ =\ 0.001;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_l1param\ \ \ \ \ \ =\ 0.5;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_l2param\ \ \ \ \ \ =\ 0.5;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \};}
+\DoxyCodeLine{00086\ \}}
 
 \end{DoxyCode}

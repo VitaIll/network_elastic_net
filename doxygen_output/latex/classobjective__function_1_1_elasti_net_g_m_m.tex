@@ -1,0 +1,148 @@
+\doxysection{objective\+\_\+function\+::Elasti\+Net\+GMM Class Reference}
+\hypertarget{classobjective__function_1_1_elasti_net_g_m_m}{}\label{classobjective__function_1_1_elasti_net_g_m_m}\index{objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}}
+Inheritance diagram for objective\+\_\+function\+::Elasti\+Net\+GMM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classobjective__function_1_1_elasti_net_g_m_m}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a998cb1d2dc088d9511c29882d1e2fb97}{Elasti\+Net\+GMM}} (\mbox{\hyperlink{classdata_1_1_panel_data_interface}{Panel\+Data\+Interface}} \texorpdfstring{$\ast$}{*}panel\+Data)
+\begin{DoxyCompactList}\small\item\em Instance of the elastic net GMM class is created from a pointer to the Panel\+Data\+Interface, implying that GMM objective is created automatically uppon given access to dataset in panell format. All relevant properties are figgured by the GMM class trough the comunication protocol defined by the data interface. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a0a9f80497a8de6e358802ab167e64cb7}{operator()}} (const vector\+\_\+t \&x\+\_\+0) override final
+\begin{DoxyCompactList}\small\item\em Call operator overloaf, obtains value function at point x\+\_\+0 from R\texorpdfstring{$^\wedge$}{\string^}n space. \end{DoxyCompactList}\item 
+virtual vector\+\_\+t \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_af284a03b96c24a5f0f4111f9b6c33bee}{diff}} (const vector\+\_\+t \&x\+\_\+0) override final
+\begin{DoxyCompactList}\small\item\em Differentiation operator which computes an approximate value of GMM gradient at x\+\_\+0 using forward numerical differentiation. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a124a23176f28b04f70bb0c03735f6bf8}{dimensions}} () const override final
+\begin{DoxyCompactList}\small\item\em Dimension call returns dimension of the search space. The purpose of this method is to communicate to optimization algorithm the dimensions of the optimization problem at hand to initiate correct comunication protocol. \end{DoxyCompactList}\item 
+virtual Estimated\+Params\+::pointer\+\_\+t \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_aebad1339a616ecc2eb1acfd8dd181583}{get\+Params}} () const override final
+\begin{DoxyCompactList}\small\item\em Returns pointer to estimated params packaged in special \doxylink{classobjective__function_1_1_estimated_params}{Estimated\+Params} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Call operator ()}\par
+{\em Overload of the call () operator for objective function evaluation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & call operator takes in point x\+\_\+0 as an argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Call to the function returns value of the objective in x\+\_\+0. ~\newline
+ 
+\end{DoxyReturn}
+}\end{Indent}
+\begin{Indent}\textbf{ Differentiation method}\par
+{\em This method will return value of gradient in x\+\_\+0. }\end{Indent}
+\begin{Indent}\textbf{ Dimensions of search space}\par
+{\em Gets dimension of the optimization space. }\end{Indent}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classobjective__function_1_1_elasti_net_g_m_m_a998cb1d2dc088d9511c29882d1e2fb97}\label{classobjective__function_1_1_elasti_net_g_m_m_a998cb1d2dc088d9511c29882d1e2fb97} 
+\index{objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}!ElastiNetGMM@{ElastiNetGMM}}
+\index{ElastiNetGMM@{ElastiNetGMM}!objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}}
+\doxysubsubsection{\texorpdfstring{ElastiNetGMM()}{ElastiNetGMM()}}
+{\footnotesize\ttfamily objective\+\_\+function\+::\+Elasti\+Net\+GMM\+::\+Elasti\+Net\+GMM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdata_1_1_panel_data_interface}{Panel\+Data\+Interface}} \texorpdfstring{$\ast$}{*}}]{panel\+Data }\end{DoxyParamCaption})}
+
+
+
+Instance of the elastic net GMM class is created from a pointer to the Panel\+Data\+Interface, implying that GMM objective is created automatically uppon given access to dataset in panell format. All relevant properties are figgured by the GMM class trough the comunication protocol defined by the data interface. 
+
+@constructor \doxylink{classobjective__function_1_1_elasti_net_g_m_m}{Elasti\+Net\+GMM} (Panel\+Data\+Interface\texorpdfstring{$\ast$}{*} panel\+Data) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classobjective__function_1_1_elasti_net_g_m_m_af284a03b96c24a5f0f4111f9b6c33bee}\label{classobjective__function_1_1_elasti_net_g_m_m_af284a03b96c24a5f0f4111f9b6c33bee} 
+\index{objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}!diff@{diff}}
+\index{diff@{diff}!objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily objective\+\_\+function\+::\+Elasti\+Net\+GMM\+::diff (\begin{DoxyParamCaption}\item[{const vector\+\_\+t \&}]{x\+\_\+0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Differentiation operator which computes an approximate value of GMM gradient at x\+\_\+0 using forward numerical differentiation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n-\/dimensional} & vector x\+\_\+0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns value of gradient vector at x\+\_\+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{objective\+\_\+function\+::\+Objective\+Function\+Interface}}.
+
+\Hypertarget{classobjective__function_1_1_elasti_net_g_m_m_a124a23176f28b04f70bb0c03735f6bf8}\label{classobjective__function_1_1_elasti_net_g_m_m_a124a23176f28b04f70bb0c03735f6bf8} 
+\index{objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}}
+\doxysubsubsection{\texorpdfstring{dimensions()}{dimensions()}}
+{\footnotesize\ttfamily objective\+\_\+function\+::\+Elasti\+Net\+GMM\+::dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Dimension call returns dimension of the search space. The purpose of this method is to communicate to optimization algorithm the dimensions of the optimization problem at hand to initiate correct comunication protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an integer specifing size of the search space. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{objective\+\_\+function\+::\+Objective\+Function\+Interface}}.
+
+\Hypertarget{classobjective__function_1_1_elasti_net_g_m_m_aebad1339a616ecc2eb1acfd8dd181583}\label{classobjective__function_1_1_elasti_net_g_m_m_aebad1339a616ecc2eb1acfd8dd181583} 
+\index{objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}!getParams@{getParams}}
+\index{getParams@{getParams}!objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily objective\+\_\+function\+::\+Elasti\+Net\+GMM\+::get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns pointer to estimated params packaged in special \doxylink{classobjective__function_1_1_estimated_params}{Estimated\+Params} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns shared pointer to the class with estimated parameters. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{objective\+\_\+function\+::\+Objective\+Function\+Interface}}.
+
+\Hypertarget{classobjective__function_1_1_elasti_net_g_m_m_a0a9f80497a8de6e358802ab167e64cb7}\label{classobjective__function_1_1_elasti_net_g_m_m_a0a9f80497a8de6e358802ab167e64cb7} 
+\index{objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}!operator()@{operator()}}
+\index{operator()@{operator()}!objective\_function::ElastiNetGMM@{objective\_function::ElastiNetGMM}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily double objective\+\_\+function\+::\+Elasti\+Net\+GMM\+::operator() (\begin{DoxyParamCaption}\item[{const vector\+\_\+t \&}]{x\+\_\+0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Call operator overloaf, obtains value function at point x\+\_\+0 from R\texorpdfstring{$^\wedge$}{\string^}n space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n-\/dimensional} & vector x\+\_\+0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns value of GMM at x\+\_\+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{objective\+\_\+function\+::\+Objective\+Function\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/\mbox{\hyperlink{_elastic_net_g_m_m_8h}{Elastic\+Net\+GMM.\+h}}\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/Elastic\+Net\+GMM.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\doxysection{optimization\+\_\+algorithms\+::swarm\+\_\+algorithms\+::Particle\+Swarm Class Reference}
+\hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}{}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}\index{optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}}
+Inheritance diagram for optimization\+\_\+algorithms\+::swarm\+\_\+algorithms\+::Particle\+Swarm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_affe5d542fedd3abef9d2b3c31d71e510}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_affe5d542fedd3abef9d2b3c31d71e510} 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}{Particle\+Swarm}} $>$ {\bfseries pointer\+\_\+t}
+\item 
+\Hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a55c1772ecb4900c1021a1a0ab93b2f1f}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a55c1772ecb4900c1021a1a0ab93b2f1f} 
+typedef std\+::set$<$ Particle\+::pointer\+\_\+t $>$ {\bfseries swarm\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a975ec4ed24770db962f69c486f0fa626}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a975ec4ed24770db962f69c486f0fa626} 
+{\bfseries Particle\+Swarm} (\mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{Objective\+Function\+Interface}} \texorpdfstring{$\ast$}{*}objective\+Iface)
+\item 
+virtual void \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_af98dba0ca6a278beb9c96be622fac860}{optimize}} (const int \&max\+Iter) override final
+\item 
+virtual void \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a4f398768f5e16b888bbfa02917601fec}{optimize}} () override final
+\item 
+virtual int \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a79ab7428c8c2d6435bb4df26952231d4}{dim}} () const override final
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a79ab7428c8c2d6435bb4df26952231d4}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a79ab7428c8c2d6435bb4df26952231d4} 
+\index{optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}!dim@{dim}}
+\index{dim@{dim}!optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}}
+\doxysubsubsection{\texorpdfstring{dim()}{dim()}}
+{\footnotesize\ttfamily virtual int optimization\+\_\+algorithms\+::swarm\+\_\+algorithms\+::\+Particle\+Swarm\+::dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classoptimization__algorithms_1_1_optimization_algorithm_interface}{optimization\+\_\+algorithms\+::\+Optimization\+Algorithm\+Interface}}.
+
+\Hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a4f398768f5e16b888bbfa02917601fec}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_a4f398768f5e16b888bbfa02917601fec} 
+\index{optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}!optimize@{optimize}}
+\index{optimize@{optimize}!optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void optimization\+\_\+algorithms\+::swarm\+\_\+algorithms\+::\+Particle\+Swarm\+::optimize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classoptimization__algorithms_1_1_optimization_algorithm_interface}{optimization\+\_\+algorithms\+::\+Optimization\+Algorithm\+Interface}}.
+
+\Hypertarget{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_af98dba0ca6a278beb9c96be622fac860}\label{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm_af98dba0ca6a278beb9c96be622fac860} 
+\index{optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}!optimize@{optimize}}
+\index{optimize@{optimize}!optimization\_algorithms::swarm\_algorithms::ParticleSwarm@{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void optimization\+\_\+algorithms\+::swarm\+\_\+algorithms\+::\+Particle\+Swarm\+::optimize (\begin{DoxyParamCaption}\item[{const int \&}]{max\+Iter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classoptimization__algorithms_1_1_optimization_algorithm_interface}{optimization\+\_\+algorithms\+::\+Optimization\+Algorithm\+Interface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/Particle\+Swarm.\+h\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/Particle\+Swarm.\+cpp\end{DoxyCompactItemize}

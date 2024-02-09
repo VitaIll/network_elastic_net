@@ -23,8 +23,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elastic net GMM
+   <div id="projectname">Elastic net GMM<span id="projectnumber">&#160;1.1</span>
    </div>
+   <div id="projectbrief">Elastic net GMM estimation of network systems.</div>
   </td>
  </tr>
  </tbody>
@@ -75,47 +76,61 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">DataTypes.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>I use Eigen for linear algebra and standard library map to store instances of more complex data classes.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;map&gt;</code><br />
 <code>#include &lt;span&gt;</code><br />
 <code>#include &lt;Eigen/dense&gt;</code><br />
 </div>
 <p><a href="_data_types_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedata" id="r_namespacedata"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedata.html">data</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Integer index type</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Element access type. <br  />
+ </p>
+</div></td></tr>
 <tr class="memitem:a849f01e9cce82cf0ca23614ba136a322" id="r_a849f01e9cce82cf0ca23614ba136a322"><td class="memItemLeft" align="right" valign="top"><a id="a849f01e9cce82cf0ca23614ba136a322" name="a849f01e9cce82cf0ca23614ba136a322"></a>
 typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>data::index_t</b></td></tr>
 <tr class="separator:a849f01e9cce82cf0ca23614ba136a322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Vector</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Column vector of real numbers. <br  />
+ </p>
+</div></td></tr>
 <tr class="memitem:a0ba61e7e389a1df117dc236b17b0c38e" id="r_a0ba61e7e389a1df117dc236b17b0c38e"><td class="memItemLeft" align="right" valign="top"><a id="a0ba61e7e389a1df117dc236b17b0c38e" name="a0ba61e7e389a1df117dc236b17b0c38e"></a>
 typedef Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><b>data::vector_t</b></td></tr>
-<tr class="memdesc:a0ba61e7e389a1df117dc236b17b0c38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element access type. <br /></td></tr>
 <tr class="separator:a0ba61e7e389a1df117dc236b17b0c38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Matrix</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Matrix type for data storage of observational data. <br  />
+ </p>
+</div></td></tr>
 <tr class="memitem:a2de251cb314c9459ede3ac5ccdf1c23c" id="r_a2de251cb314c9459ede3ac5ccdf1c23c"><td class="memItemLeft" align="right" valign="top"><a id="a2de251cb314c9459ede3ac5ccdf1c23c" name="a2de251cb314c9459ede3ac5ccdf1c23c"></a>
 typedef Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><b>data::matrix_t</b></td></tr>
-<tr class="memdesc:a2de251cb314c9459ede3ac5ccdf1c23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Column vector of real numbers. <br /></td></tr>
 <tr class="separator:a2de251cb314c9459ede3ac5ccdf1c23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Panel collection of matricies</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Conatiner storing panel data as sequence of matricies. <br  />
+ </p>
+</div></td></tr>
 <tr class="memitem:a53c1ffbaa94b2a14df5bc4326937480b" id="r_a53c1ffbaa94b2a14df5bc4326937480b"><td class="memItemLeft" align="right" valign="top"><a id="a53c1ffbaa94b2a14df5bc4326937480b" name="a53c1ffbaa94b2a14df5bc4326937480b"></a>
-typedef std::map&lt; int, <a class="el" href="namespacedata.html#a2de251cb314c9459ede3ac5ccdf1c23c">matrix_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data::panel_t</b></td></tr>
-<tr class="memdesc:a53c1ffbaa94b2a14df5bc4326937480b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix type for data storage of oservational data. <br /></td></tr>
+typedef std::map&lt; int, matrix_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data::panel_t</b></td></tr>
 <tr class="separator:a53c1ffbaa94b2a14df5bc4326937480b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Iterable range</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Data parsing iterable device for conscise looping. <br  />
+ </p>
+</div></td></tr>
 <tr class="memitem:ad30bd2f797103f429a683f5d54a39f5a" id="r_ad30bd2f797103f429a683f5d54a39f5a"><td class="memItemLeft" align="right" valign="top"><a id="ad30bd2f797103f429a683f5d54a39f5a" name="ad30bd2f797103f429a683f5d54a39f5a"></a>
 typedef std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data::range_t</b></td></tr>
-<tr class="memdesc:ad30bd2f797103f429a683f5d54a39f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conatiner storing panel data as sequence of matricies. <br /></td></tr>
 <tr class="separator:ad30bd2f797103f429a683f5d54a39f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file contains base definitions of custom data types used to manipulate obervational data. </p>
+<div class="textblock"><p>I use Eigen for linear algebra and standard library map to store instances of more complex data classes. </p>
+<p>This file contains base definitions of custom data types used to manipulate obervational data.</p>
+<h1><a class="anchor" id="Includes"></a>
+Includes</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

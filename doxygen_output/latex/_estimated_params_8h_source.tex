@@ -1,0 +1,49 @@
+\doxysection{Estimated\+Params.\+h}
+\hypertarget{_estimated_params_8h_source}{}\label{_estimated_params_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/EstimatedParams.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/EstimatedParams.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }objective\_function}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classobjective__function_1_1_estimated_params}{EstimatedParams}}}
+\DoxyCodeLine{00010\ \{\ }
+\DoxyCodeLine{00011\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_estimated_params}{EstimatedParams}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ unitCount);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \textcolor{comment}{//\ EstimatedParams\ (const\ EstimatedParams\&\ other)\ :\ m\_unitCount(other.unitCount())\ \{\}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \string~\ EstimatedParams\ ();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr\ <EstimatedParams>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pointer\_t;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator\ ()\ (vector\_t\ \textcolor{keyword}{const}\&\ paramVector);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ matrix\_t\ adjacencyMatrix\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_adjacencyMatrix;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \ \ rho\ ()\textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_rho;\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \ \ beta()\textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_beta;\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \ \ gamma()\textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_gamma;\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \ \ \ unitCount()\textcolor{keyword}{\ \ \ \ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_unitCount;\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ pointer\_t\ pointer()\textcolor{keyword}{\ \ \ \ \ \ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_theseParams;\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ unpackVector\ (\ vector\_t\ \textcolor{keyword}{const}\&\ paramVector\ );}
+\DoxyCodeLine{00031\ \ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ pointer\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_theseParams\ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_unitCount;}
+\DoxyCodeLine{00035\ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ matrix\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_adjacencyMatrix\ \{matrix\_t::Zero(m\_unitCount,m\_unitCount)\};}
+\DoxyCodeLine{00037\ \ \ \ \ \ vector\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_scalarParams\ \ \ \ \{vector\_t::Zero(m\_unitCount)\};}
+\DoxyCodeLine{00038\ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_rho\ \ \{\ 0.0\ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_beta\ \{\ 0.0\ \};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_gamma\{\ 0.0\ \};}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

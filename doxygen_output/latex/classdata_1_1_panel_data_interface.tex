@@ -9,27 +9,27 @@ Inheritance diagram for data\+::Panel\+Data\+Interface\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\+\_\+t}} \& \mbox{\hyperlink{classdata_1_1_panel_data_interface_a928402deb74ca4c5560c87721c8e49eb}{get\+Panel}} () const =0
-\begin{DoxyCompactList}\small\item\em Returns observational panel data. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_interface_a9065913d03d7431ba21fb1f5e9a7c75b}{get\+Xt}} (index\+\_\+t \&t) const =0
-\begin{DoxyCompactList}\small\item\em Data getter\+: return data from the specified time period. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_interface_a8d74b3e8d40be7b4986eb6370d64933b}{get\+Yt}} (index\+\_\+t \&t) const =0
+virtual panel\+\_\+t \& \mbox{\hyperlink{classdata_1_1_panel_data_interface_a928402deb74ca4c5560c87721c8e49eb}{get\+Panel}} () const =0
+\item 
+virtual matrix\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_interface_a9065913d03d7431ba21fb1f5e9a7c75b}{get\+Xt}} (index\+\_\+t \&t) const =0
+\item 
+virtual vector\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_interface_a8d74b3e8d40be7b4986eb6370d64933b}{get\+Yt}} (index\+\_\+t \&t) const =0
 \item 
 virtual index\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_interface_a3c8ac3c9625d979d415a22e84cc9a981}{time\+Dim}} () const =0
-\begin{DoxyCompactList}\small\item\em Return data dimensions. \end{DoxyCompactList}\item 
+\item 
 \Hypertarget{classdata_1_1_panel_data_interface_ada098834b1132e1b2b734fcaf4a21686}\label{classdata_1_1_panel_data_interface_ada098834b1132e1b2b734fcaf4a21686} 
 virtual index\+\_\+t {\bfseries vars\+Dim} () const =0
 \item 
 \Hypertarget{classdata_1_1_panel_data_interface_a5d5f8477cd23b963461a17921b8ef8ad}\label{classdata_1_1_panel_data_interface_a5d5f8477cd23b963461a17921b8ef8ad} 
 virtual index\+\_\+t {\bfseries unit\+Count} () const =0
 \item 
-virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} \mbox{\hyperlink{classdata_1_1_panel_data_interface_a02a86a12aeba0aa06f0cd9fb336b1326}{time\+Range}} () const =0
-\begin{DoxyCompactList}\small\item\em Return iterables for comfortable data parsing. \end{DoxyCompactList}\item 
+virtual range\+\_\+t \mbox{\hyperlink{classdata_1_1_panel_data_interface_a02a86a12aeba0aa06f0cd9fb336b1326}{time\+Range}} () const =0
+\item 
 \Hypertarget{classdata_1_1_panel_data_interface_aa2312a1e9081872d3cdfe6765cba0a22}\label{classdata_1_1_panel_data_interface_aa2312a1e9081872d3cdfe6765cba0a22} 
-virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} {\bfseries vars\+Range} () const =0
+virtual range\+\_\+t {\bfseries vars\+Range} () const =0
 \item 
 \Hypertarget{classdata_1_1_panel_data_interface_a2653ec8daa767e12fac3b60df00f906a}\label{classdata_1_1_panel_data_interface_a2653ec8daa767e12fac3b60df00f906a} 
-virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} {\bfseries unit\+Range} () const =0
+virtual range\+\_\+t {\bfseries unit\+Range} () const =0
 \end{DoxyCompactItemize}
 
 
@@ -38,20 +38,8 @@ virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\
 \index{data::PanelDataInterface@{data::PanelDataInterface}!getPanel@{getPanel}}
 \index{getPanel@{getPanel}!data::PanelDataInterface@{data::PanelDataInterface}}
 \doxysubsubsection{\texorpdfstring{getPanel()}{getPanel()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacedata_a53c1ffbaa94b2a14df5bc4326937480b}{panel\+\_\+t}} \& data\+::\+Panel\+Data\+Interface\+::get\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual panel\+\_\+t \& data\+::\+Panel\+Data\+Interface\+::get\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-
-
-Returns observational panel data. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em t} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_a0d3c1d3ab7618e8e71a6130cd743378d}{data\+::\+Panel\+Data}}.
@@ -60,20 +48,8 @@ Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_a0d3c1d3ab7618e8e71a613
 \index{data::PanelDataInterface@{data::PanelDataInterface}!getXt@{getXt}}
 \index{getXt@{getXt}!data::PanelDataInterface@{data::PanelDataInterface}}
 \doxysubsubsection{\texorpdfstring{getXt()}{getXt()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacedata_a2de251cb314c9459ede3ac5ccdf1c23c}{matrix\+\_\+t}} data\+::\+Panel\+Data\+Interface\+::get\+Xt (\begin{DoxyParamCaption}\item[{index\+\_\+t \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual matrix\+\_\+t data\+::\+Panel\+Data\+Interface\+::get\+Xt (\begin{DoxyParamCaption}\item[{index\+\_\+t \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-
-
-Data getter\+: return data from the specified time period. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em t} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_a363ecc5a2b180cbbdd845d5fc54f85e6}{data\+::\+Panel\+Data}}.
@@ -82,7 +58,7 @@ Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_a363ecc5a2b180cbbdd845d
 \index{data::PanelDataInterface@{data::PanelDataInterface}!getYt@{getYt}}
 \index{getYt@{getYt}!data::PanelDataInterface@{data::PanelDataInterface}}
 \doxysubsubsection{\texorpdfstring{getYt()}{getYt()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacedata_a0ba61e7e389a1df117dc236b17b0c38e}{vector\+\_\+t}} data\+::\+Panel\+Data\+Interface\+::get\+Yt (\begin{DoxyParamCaption}\item[{index\+\_\+t \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual vector\+\_\+t data\+::\+Panel\+Data\+Interface\+::get\+Yt (\begin{DoxyParamCaption}\item[{index\+\_\+t \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -96,28 +72,14 @@ Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_ac50304fcc38e177691e2b5
 
 
 
-Return data dimensions. 
-
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
-
-
 Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_a5fe1488bca7efec088d835fe98d8ba94}{data\+::\+Panel\+Data}}.
 
 \Hypertarget{classdata_1_1_panel_data_interface_a02a86a12aeba0aa06f0cd9fb336b1326}\label{classdata_1_1_panel_data_interface_a02a86a12aeba0aa06f0cd9fb336b1326} 
 \index{data::PanelDataInterface@{data::PanelDataInterface}!timeRange@{timeRange}}
 \index{timeRange@{timeRange}!data::PanelDataInterface@{data::PanelDataInterface}}
 \doxysubsubsection{\texorpdfstring{timeRange()}{timeRange()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacedata_ad30bd2f797103f429a683f5d54a39f5a}{range\+\_\+t}} data\+::\+Panel\+Data\+Interface\+::time\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual range\+\_\+t data\+::\+Panel\+Data\+Interface\+::time\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-
-
-Return iterables for comfortable data parsing. 
-
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{classdata_1_1_panel_data_a4e1ccdb88d2913a87ee4cf8af75bb0ed}{data\+::\+Panel\+Data}}.

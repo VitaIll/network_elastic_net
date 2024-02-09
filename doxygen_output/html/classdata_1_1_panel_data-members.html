@@ -23,8 +23,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elastic net GMM
+   <div id="projectname">Elastic net GMM<span id="projectnumber">&#160;1.1</span>
    </div>
+   <div id="projectbrief">Elastic net GMM estimation of network systems.</div>
   </td>
  </tr>
  </tbody>
@@ -71,7 +72,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacedata.html">data</a></li><li class="navelem"><a class="el" href="classdata_1_1_panel_data.html">PanelData</a></li>  </ul>
+<li class="navelem"><b>data</b></li><li class="navelem"><a class="el" href="classdata_1_1_panel_data.html">PanelData</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,10 +82,12 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#a0d3c1d3ab7618e8e71a6130cd743378d">getPanel</a>() const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#a363ecc5a2b180cbbdd845d5fc54f85e6">getXt</a>(index_t &amp;t) const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#ac50304fcc38e177691e2b5dd5336862f">getYt</a>(index_t &amp;t) const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>PanelData</b>(panel_t &amp;observedData) (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>data</b>() const (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#a0d3c1d3ab7618e8e71a6130cd743378d">getPanel</a>() const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#a363ecc5a2b180cbbdd845d5fc54f85e6">getXt</a>(index_t &amp;t) const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#ac50304fcc38e177691e2b5dd5336862f">getYt</a>(index_t &amp;t) const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PanelData</b>(panel_t &amp;observedData) (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>pointer_t</b> typedef (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#a5fe1488bca7efec088d835fe98d8ba94">timeDim</a>() const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classdata_1_1_panel_data.html#a4e1ccdb88d2913a87ee4cf8af75bb0ed">timeRange</a>() const override final</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>unitCount</b>() const override final (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -92,6 +95,7 @@ $(function() {
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>varsDim</b>() const override final (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>varsRange</b>() const override final (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~PanelData</b>() (defined in <a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data.html">data::PanelData</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>~PanelDataInterface</b>() (defined in <a class="el" href="classdata_1_1_panel_data_interface.html">data::PanelDataInterface</a>)</td><td class="entry"><a class="el" href="classdata_1_1_panel_data_interface.html">data::PanelDataInterface</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -33,23 +33,22 @@ namespace objective_function
 		  ElastiNetGMM (PanelDataInterface* panelData);
 		~ ElastiNetGMM ();
 		
-		/** @fn      double operator ()  (const vector_t& x_0)
+		/** @fn      virtual double operator () (const vector_t& x_0) override final
 		  * @brief   Call operator overloaf, obtains value function at point x_0 from R^n space.
 		  * @param   n-dimensional vector x_0
 		  * @return  returns value of GMM at x_0
 		  */
 		virtual double operator ()  (const vector_t& x_0) override final;
 
-		/** @fn      diff(const vector_t& x_0)
+		/** @fn      virtual vector_t diff(const vector_t& x_0) override final
 		  * @brief   Differentiation operator which computes an approximate value of GMM gradient
 		  *          at x_0 using forward numerical differentiation.
-		  *
 		  * @param   n-dimensional vector x_0
 		  * @return  returns value of gradient vector at x_0
 		  */
 		virtual vector_t        diff(const vector_t& x_0) override final;
 
-		/** @fn      dimensions() 
+		/** @fn      virtual int dimensions() const override final
 	      * @brief   Dimension call returns dimension of the search space.
 		  *          The purpose of this method is to communicate to optimization algorithm 
 		  *          the dimensions of the optimization problem at hand to initiate correct comunication protocol.
@@ -59,7 +58,7 @@ namespace objective_function
 	     */
 		virtual int             dimensions() const        override final;
         
-		/** @fn      getParams()
+		/** @fn      virtual EstimatedParams::pointer_t getParams() const override final
           * @brief   Returns pointer to estimated params packaged in special EstimatedParams class.
           * @param   none
           * @return  Returns shared pointer to the class with estimated parameters.

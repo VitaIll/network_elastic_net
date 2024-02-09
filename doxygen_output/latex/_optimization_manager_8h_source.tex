@@ -1,0 +1,38 @@
+\doxysection{Optimization\+Manager.\+h}
+\hypertarget{_optimization_manager_8h_source}{}\label{_optimization_manager_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/OptimizationManager.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/OptimizationManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}PanelData.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ParticleSwarm.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_elastic_net_g_m_m_8h}{ElasticNetGMM.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}PanelDataInterface.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_optimization_algorithm_interface_8h}{OptimizationAlgorithmInterface.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_objective_function_interface_8h}{ObjectiveFunctionInterface.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }objective\_function;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }optimization\_algorithms;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}{optimization\_algorithms::swarm\_algorithms::ParticleSwarm}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_optimization_manger}{OptimizationManger}}\ }
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \mbox{\hyperlink{class_optimization_manger}{OptimizationManger}}\ \ (panel\_t\&\ data);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \string~\ OptimizationManger\ \ ();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator\ ()\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ maxIter);}
+\DoxyCodeLine{00025\ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ EstimatedParams::pointer\_t\ getResults()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classdata_1_1_panel_data_interface}{PanelDataInterface}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_data\ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_objective\ \ \ \ \ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classoptimization__algorithms_1_1_optimization_algorithm_interface}{OptimizationAlgorithmInterface}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_algorithm\ \ \ \ \ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00032\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Errors.\+h}
+\hypertarget{_errors_8h_source}{}\label{_errors_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/Errors.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/Errors.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EstimatedParams.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}PanelDataInterface.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }objective\_function}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classobjective__function_1_1_errors}{Errors}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_errors}{Errors}}\ \ (\ EstimatedParams::pointer\_t\ params\ );}
+\DoxyCodeLine{00016\ \ \ \ \ \string~\ Errors\ \ ();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr<Errors>\ \ \ \ \ \ \ \ \ pointer\_t;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ vector\_t\ operator\ ()\ \ \ (\textcolor{keyword}{const}\ vector\_t\&\ paramVector,\ \textcolor{keyword}{const}\ matrix\_t\&\ data);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \textcolor{keyword}{inline}\ EstimatedParams::pointer\_t\ getParams()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_params;\ \}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ vector\_t\ computeErrors\ (\textcolor{keyword}{const}\ vector\_t\&\ paramVector,\ \textcolor{keyword}{const}\ matrix\_t\&\ data);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ EstimatedParams::pointer\_t\ \ \ \ \ \ \ m\_params;}
+\DoxyCodeLine{00028\ \ \ \ \ pointer\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_thisInstance\ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00029\ \};\ }
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

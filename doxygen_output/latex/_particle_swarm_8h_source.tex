@@ -1,0 +1,49 @@
+\doxysection{Particle\+Swarm.\+h}
+\hypertarget{_particle_swarm_8h_source}{}\label{_particle_swarm_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ParticleSwarm.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/ParticleSwarm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_objective_function_interface_8h}{ObjectiveFunctionInterface.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_optimization_algorithm_interface_8h}{OptimizationAlgorithmInterface.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Particle.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{objective\_function::ObjectiveFunctionInterface}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }optimization\_algorithms::swarm\_algorithms}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}{ParticleSwarm}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classoptimization__algorithms_1_1_optimization_algorithm_interface}{OptimizationAlgorithmInterface}}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle_swarm}{ParticleSwarm}}\ (\mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}*\ \ objectiveIface\ );}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \string~\ ParticleSwarm\ ();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ optimize(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ maxIter)\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ optimize()\ \textcolor{keyword}{override}\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \ dim()\ \textcolor{keyword}{const}\ \textcolor{keyword}{override}\ \textcolor{keyword}{final}\ \{\ \textcolor{keywordflow}{return}\ m\_dimensions;\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr<ParticleSwarm>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pointer\_t;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::set<Particle::pointer\_t>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swarm\_t;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ vector\_t\ uniform();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ update();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_populationSize\ \ \ \{\ \ 100\ \ \ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_maxIter\ \ \ \ \ \ \ \ \ \ \{\ \ 100\ \ \ \};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_bound\ \ \ \ \ \ \ \ \ \ \ \ \{\ \ 2.0\ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ pointer\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_thisSwarm\ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_objective;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \textcolor{keyword}{const}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_dimensions;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ swarm\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_swarm;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ vector\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_globalBest;}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

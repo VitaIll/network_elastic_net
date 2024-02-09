@@ -1,0 +1,88 @@
+\doxysection{objective\+\_\+function\+::Objective\+Function\+Interface Class Reference}
+\hypertarget{classobjective__function_1_1_objective_function_interface}{}\label{classobjective__function_1_1_objective_function_interface}\index{objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}}
+Inheritance diagram for objective\+\_\+function\+::Objective\+Function\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classobjective__function_1_1_objective_function_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Call operator ()}\par
+{\em Overload of the call () operator for objective function evaluation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & call operator takes in point x\+\_\+0 as an argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Call to the function returns value of the objective in x\+\_\+0. ~\newline
+ 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface_a516d84b73e667dc1cbeb373ad074ac56}{operator()}} (const vector\+\_\+t \&x\+\_\+0)=0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Differentiation method}\par
+{\em This method will return value of gradient in x\+\_\+0. }\begin{DoxyCompactItemize}
+\item 
+virtual vector\+\_\+t \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface_a0a1e8f315fb28bc3a7b402692625671d}{diff}} (const vector\+\_\+t \&x\+\_\+0)=0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Dimensions of search space}\par
+{\em Gets dimension of the optimization space. }\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface_a1667f9a0ddfd8077ef4d6e01f0fa1e64}{dimensions}} () const =0
+\item 
+virtual Estimated\+Params\+::pointer\+\_\+t \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface_a6f7a7085c7a896a245b31e0762b316f2}{get\+Params}} () const =0
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classobjective__function_1_1_objective_function_interface_a0a1e8f315fb28bc3a7b402692625671d}\label{classobjective__function_1_1_objective_function_interface_a0a1e8f315fb28bc3a7b402692625671d} 
+\index{objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}!diff@{diff}}
+\index{diff@{diff}!objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily virtual vector\+\_\+t objective\+\_\+function\+::\+Objective\+Function\+Interface\+::diff (\begin{DoxyParamCaption}\item[{const vector\+\_\+t \&}]{x\+\_\+0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_af284a03b96c24a5f0f4111f9b6c33bee}{objective\+\_\+function\+::\+Elasti\+Net\+GMM}}.
+
+\Hypertarget{classobjective__function_1_1_objective_function_interface_a1667f9a0ddfd8077ef4d6e01f0fa1e64}\label{classobjective__function_1_1_objective_function_interface_a1667f9a0ddfd8077ef4d6e01f0fa1e64} 
+\index{objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}}
+\doxysubsubsection{\texorpdfstring{dimensions()}{dimensions()}}
+{\footnotesize\ttfamily virtual int objective\+\_\+function\+::\+Objective\+Function\+Interface\+::dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a124a23176f28b04f70bb0c03735f6bf8}{objective\+\_\+function\+::\+Elasti\+Net\+GMM}}.
+
+\Hypertarget{classobjective__function_1_1_objective_function_interface_a6f7a7085c7a896a245b31e0762b316f2}\label{classobjective__function_1_1_objective_function_interface_a6f7a7085c7a896a245b31e0762b316f2} 
+\index{objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}!getParams@{getParams}}
+\index{getParams@{getParams}!objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily virtual Estimated\+Params\+::pointer\+\_\+t objective\+\_\+function\+::\+Objective\+Function\+Interface\+::get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_aebad1339a616ecc2eb1acfd8dd181583}{objective\+\_\+function\+::\+Elasti\+Net\+GMM}}.
+
+\Hypertarget{classobjective__function_1_1_objective_function_interface_a516d84b73e667dc1cbeb373ad074ac56}\label{classobjective__function_1_1_objective_function_interface_a516d84b73e667dc1cbeb373ad074ac56} 
+\index{objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}!operator()@{operator()}}
+\index{operator()@{operator()}!objective\_function::ObjectiveFunctionInterface@{objective\_function::ObjectiveFunctionInterface}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual double objective\+\_\+function\+::\+Objective\+Function\+Interface\+::operator() (\begin{DoxyParamCaption}\item[{const vector\+\_\+t \&}]{x\+\_\+0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classobjective__function_1_1_elasti_net_g_m_m_a0a9f80497a8de6e358802ab167e64cb7}{objective\+\_\+function\+::\+Elasti\+Net\+GMM}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/workspace/c++ projects/network\+\_\+detection\+\_\+lib/network\+\_\+estimation/network\+\_\+elastic\+\_\+net/\mbox{\hyperlink{_objective_function_interface_8h}{Objective\+Function\+Interface.\+h}}\end{DoxyCompactItemize}

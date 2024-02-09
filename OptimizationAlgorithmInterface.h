@@ -15,7 +15,9 @@ using namespace data;
   * @{
   */
 namespace optimization_algorithms
-{
+{ 
+  /** class OptimizationAlgorithmInterface
+    */
 	class OptimizationAlgorithmInterface
 	{
 	public:

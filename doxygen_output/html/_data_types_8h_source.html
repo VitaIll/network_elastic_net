@@ -23,8 +23,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elastic net GMM
+   <div id="projectname">Elastic net GMM<span id="projectnumber">&#160;1.1</span>
    </div>
+   <div id="projectbrief">Elastic net GMM estimation of network systems.</div>
   </td>
  </tr>
  </tbody>
@@ -83,26 +84,25 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">DataTypes.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_data_types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;span&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Eigen/dense&gt;</span></div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacedata.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedata.html">data</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">typedef</span> <span class="keywordtype">int</span>                                    index_t;      </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacedata.html#a0ba61e7e389a1df117dc236b17b0c38e">   15</a></span>    <span class="keyword">typedef</span> Eigen::VectorXd                        <a class="code hl_typedef" href="namespacedata.html#a0ba61e7e389a1df117dc236b17b0c38e">vector_t</a>;     </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacedata.html#a2de251cb314c9459ede3ac5ccdf1c23c">   16</a></span>    <span class="keyword">typedef</span> Eigen::MatrixXd                        <a class="code hl_typedef" href="namespacedata.html#a2de251cb314c9459ede3ac5ccdf1c23c">matrix_t</a>;     </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacedata.html#a53c1ffbaa94b2a14df5bc4326937480b">   17</a></span>    <span class="keyword">typedef</span> std::map &lt;int, matrix_t&gt;               <a class="code hl_typedef" href="namespacedata.html#a53c1ffbaa94b2a14df5bc4326937480b">panel_t</a>;      </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">   18</a></span>    <span class="keyword">typedef</span> std::vector &lt;int&gt;                      <a class="code hl_typedef" href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">range_t</a>;      </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
-</div>
-<div class="ttc" id="anamespacedata_html"><div class="ttname"><a href="namespacedata.html">data</a></div><div class="ttdef"><b>Definition</b> DataTypes.h:13</div></div>
-<div class="ttc" id="anamespacedata_html_a0ba61e7e389a1df117dc236b17b0c38e"><div class="ttname"><a href="namespacedata.html#a0ba61e7e389a1df117dc236b17b0c38e">data::vector_t</a></div><div class="ttdeci">Eigen::VectorXd vector_t</div><div class="ttdoc">Element access type.</div><div class="ttdef"><b>Definition</b> DataTypes.h:15</div></div>
-<div class="ttc" id="anamespacedata_html_a2de251cb314c9459ede3ac5ccdf1c23c"><div class="ttname"><a href="namespacedata.html#a2de251cb314c9459ede3ac5ccdf1c23c">data::matrix_t</a></div><div class="ttdeci">Eigen::MatrixXd matrix_t</div><div class="ttdoc">Column vector of real numbers.</div><div class="ttdef"><b>Definition</b> DataTypes.h:16</div></div>
-<div class="ttc" id="anamespacedata_html_a53c1ffbaa94b2a14df5bc4326937480b"><div class="ttname"><a href="namespacedata.html#a53c1ffbaa94b2a14df5bc4326937480b">data::panel_t</a></div><div class="ttdeci">std::map&lt; int, matrix_t &gt; panel_t</div><div class="ttdoc">Matrix type for data storage of oservational data.</div><div class="ttdef"><b>Definition</b> DataTypes.h:17</div></div>
-<div class="ttc" id="anamespacedata_html_ad30bd2f797103f429a683f5d54a39f5a"><div class="ttname"><a href="namespacedata.html#ad30bd2f797103f429a683f5d54a39f5a">data::range_t</a></div><div class="ttdeci">std::vector&lt; int &gt; range_t</div><div class="ttdoc">Conatiner storing panel data as sequence of matricies.</div><div class="ttdef"><b>Definition</b> DataTypes.h:18</div></div>
+<a href="_data_types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;Eigen/dense&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span>data</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{  </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">typedef</span> <span class="keywordtype">int</span>                                    index_t;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">typedef</span> Eigen::VectorXd                        vector_t;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">typedef</span> Eigen::MatrixXd                        matrix_t;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">typedef</span> std::map &lt;int, matrix_t&gt;               panel_t;   </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">typedef</span> std::vector &lt;int&gt;                      range_t;      </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

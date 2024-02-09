@@ -1,0 +1,47 @@
+\doxysection{Particle.\+h}
+\hypertarget{_particle_8h_source}{}\label{_particle_8h_source}\index{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/Particle.h@{C:/workspace/c++ projects/network\_detection\_lib/network\_estimation/network\_elastic\_net/Particle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_objective_function_interface_8h}{ObjectiveFunctionInterface.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }data;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{objective\_function::ObjectiveFunctionInterface}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }optimization\_algorithms::swarm\_algorithms}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle}{Particle}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle}{Particle}}\ (\mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}*\ function,\ \textcolor{keyword}{const}\ vector\_t\&\ initialPosition);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \string~\ Particle\ ();}
+\DoxyCodeLine{00016\ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr<Particle>\ \ \ \ pointer\_t;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \ \ \ getValue\ ()\textcolor{keyword}{\ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_value;\ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \textcolor{keyword}{inline}\ vector\_t\ \ getPosition\ ()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_position;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \textcolor{keyword}{inline}\ pointer\_t\ getPtr()\textcolor{keyword}{\ \ \ \ \ \ \ const\ }\{\ \textcolor{keywordflow}{return}\ m\_thisParticle;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator\ ()\ (vector\_t\&\ globalBest);}
+\DoxyCodeLine{00024\ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator\ <\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classoptimization__algorithms_1_1swarm__algorithms_1_1_particle}{Particle}}\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{\ \ \ \ \ }\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_value\ <\ other.getValue();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ update(vector\_t\&\ globalBest);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ vector\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_position;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ vector\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_velocity;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ \ \ \ \ \ \ \ \ \ \{\ 0.0\ \};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_gradientWeight\ \{\ 0.8\ \};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classobjective__function_1_1_objective_function_interface}{ObjectiveFunctionInterface}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_function;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ pointer\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_thisParticle;}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}

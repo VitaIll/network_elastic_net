@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['evaluate_0',['evaluate',['../class_elasti_net_g_m_m.html#a9ce3d542671b3495077fc7daf7ac1543',1,'ElastiNetGMM::evaluate()'],['../class_objective_function_interface.html#a6a4f1383625f7ddc5e5374d11885deb1',1,'ObjectiveFunctionInterface::evaluate()']]]
+  ['diff_0',['diff',['../classobjective__function_1_1_elasti_net_g_m_m.html#af284a03b96c24a5f0f4111f9b6c33bee',1,'objective_function::ElastiNetGMM']]],
+  ['dimensions_1',['dimensions',['../classobjective__function_1_1_elasti_net_g_m_m.html#a124a23176f28b04f70bb0c03735f6bf8',1,'objective_function::ElastiNetGMM']]]
 ];

@@ -6,12 +6,14 @@ using namespace data;
 
 namespace objective_function
 {
+	/** @class  EstimatedParams
+	  * @brief  This class stores and manages estimated parameters, i.e. adjacenncy matrix
+	  */
 class EstimatedParams
 { 
  public:
+	 
 	  EstimatedParams (const int& unitCount);
-	 // EstimatedParams (const EstimatedParams& other) : m_unitCount(other.unitCount()) {}
-
 	~ EstimatedParams ();
 	  
 	  typedef std::shared_ptr <EstimatedParams>                pointer_t;
