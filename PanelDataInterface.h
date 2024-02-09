@@ -4,6 +4,8 @@
 
 namespace data 
 {
+	/** @class  PanelDataInterface
+	  */
 class PanelDataInterface
 {
 public:

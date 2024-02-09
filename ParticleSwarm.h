@@ -10,6 +10,8 @@ using objective_function::ObjectiveFunctionInterface;
 
 namespace optimization_algorithms::swarm_algorithms
 {
+	/* @class ParticleSwarm
+	 */
 	class ParticleSwarm : public OptimizationAlgorithmInterface
 	{
 	  public:

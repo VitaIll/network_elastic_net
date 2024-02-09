@@ -7,6 +7,8 @@ using objective_function::ObjectiveFunctionInterface;
 
 namespace optimization_algorithms::swarm_algorithms
 {
+   /* @class Particle
+	*/
 class Particle
 {
 	public:
